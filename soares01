@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato via WhatsApp</title>
+    <script>
+        function redirecionar() {
+            var nome = document.getElementById("nome").value;
+            var numero = "+55 91 983308951"; 
+            var url = `https://api.whatsapp.com/send?phone=${numero}&text=Olá%20${encodeURIComponent(nome)}`;
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <h1>Entre em Contato</h1>
+    <input type="text" id="nome" placeholder="Digite sseu Nome" required>
+    <button onclick="redirecionar()">Enviar</button>
+</body>
+</html>
